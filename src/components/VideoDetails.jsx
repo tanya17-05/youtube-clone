@@ -114,7 +114,7 @@ const VideoDetails = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">
+        <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px] no-scroll-bar">
           {relatedVideos?.contents?.map((item, index) => {
             if (item.type !== "video") return false;
             return <SuggestionVideoCard key={index} video={item.video} />;
