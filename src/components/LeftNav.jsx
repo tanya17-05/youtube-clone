@@ -45,7 +45,7 @@ const LeftNav = () => {
         })}
         <hr className="my-5 border-white/[0.2]" />
         <div className="text-white/[0.5] text-[12px]">
-          YouTube Clone with ❤️ by Tanya
+          YouTube Clone with ❤️ by <a href="https://github.com/tanya17-05" className="underline">Tanya</a>
         </div>
       </div>
     </div>
