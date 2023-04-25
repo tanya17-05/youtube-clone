@@ -36,7 +36,7 @@ const Header = () => {
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 pt-2 px-4 md:px-5 bg-white dark:bg-black">
+    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 pt-2 px-2 md:px-5 bg-white dark:bg-black">
       {loading && <Loader />}
       <div className="flex h-5 items-center">
         {pageName !== "video" && (
@@ -71,7 +71,7 @@ const Header = () => {
           </div>
           <input
             type="text"
-            className="bg-transparent outline-none text-white px-5 md:pl-0 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]"
+            className="bg-transparent outline-none text-white px-5 md:pl-0 w-28 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]"
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyUp={searchQueryHandler}
             value={searchQuery}
@@ -90,7 +90,7 @@ const Header = () => {
             <FiBell className="text-white text-xl cursor-pointer" />
           </div>
         </div>
-        <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
+        <div className="hidden md:flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
           <img src={`https://xsgames.co/randomusers/avatar.php?g=${Math.random() < 0.5 ? "male" : "female"}`} alt="" />
         </div>
       </div>

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import { Fragment, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import LeftNavMenuItem from "./LeftNavMenuItem";
@@ -23,7 +21,11 @@ const LeftNav = () => {
     }
   };
   return (
-    <div className={`md:block w-[240px] overflow-y-auto h-full py-4 bg-black absolute md:relative z-10 translate-x-[${!mobileMenu ? "-240px" : "0"}] md:translate-x-0 transition-all no-scroll-bar `}>
+    <div
+      className={`md:block w-[240px] overflow-y-auto h-full py-4 bg-black absolute md:relative z-10  ${
+        mobileMenu ? "translate-x-0" : "translate-x-[-240px]"
+      } md:translate-x-0 transition-all no-scroll-bar `}
+    >
       <div className="flex px-5 flex-col ">
         {categories.map((item, i) => {
           return (
@@ -33,7 +35,7 @@ const LeftNav = () => {
                 icon={item.icon}
                 action={() => {
                   clickHandler(item.name, item.type);
-                  navigate("/")
+                  navigate("/");
                 }}
                 className={`${
                   selectedCategory === item.name ? "bg-white/[0.15]" : ""
@@ -45,7 +47,10 @@ const LeftNav = () => {
         })}
         <hr className="my-5 border-white/[0.2]" />
         <div className="text-white/[0.5] text-[12px]">
-          YouTube Clone with ❤️ by <a href="https://github.com/tanya17-05" className="underline">Tanya</a>
+          YouTube Clone with ❤️ by{" "}
+          <a href="https://github.com/tanya17-05" className="underline">
+            Tanya
+          </a>
         </div>
       </div>
     </div>
