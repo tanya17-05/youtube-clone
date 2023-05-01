@@ -55,12 +55,7 @@ const Header = () => {
           <img
             src={ytLogo}
             alt="youtube"
-            className="h-full hidden dark:md:block"
-          />
-          <img
-            src={ytLogoMobile}
-            alt="youtube"
-            className="h-full dark:md:hidden"
+            className="h-full hidden md:block"
           />
         </Link>
       </div>
